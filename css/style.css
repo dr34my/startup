@@ -40,12 +40,14 @@ body {
   justify-content: space-between;
   align-items: center;
   padding-top: 40px;
+  max-width: 100%;
 }
 
 .header__menu {
   color: white;
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .header__item {
@@ -64,18 +66,20 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  max-width: 100%;
 }
 
 .header__title {
+  max-width: 100%;
   font-size: 48px;
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: 25px;
-  white-space: nowrap;
 }
 
 .header__subtitle {
   font-family: "Roboto Slab";
+  max-width: 100%;
 }
 
 .header__btn {
@@ -99,4 +103,94 @@ body {
 .container {
   max-width: 1140px;
   margin: 0 auto;
+}
+
+.services__title {
+  margin-top: 45px;
+}
+
+.services__title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: #555555;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.services__subtitle {
+  margin-bottom: 50px;
+}
+
+.services__row {
+  display: flex;
+  padding: 0 8px;
+  justify-content: center;
+}
+
+.services__item {
+  flex: 1 1 33.333%;
+  margin-right: 45px;
+}
+
+.services__item:last-child {
+  margin-right: 0;
+}
+
+.services__icon {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.services__name {
+  text-align: center;
+  color: #555555;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.services__text {
+  font-family: "Roboto Slab";
+  color: #555555;
+  font-size: 14px;
+  text-align: center;
+}
+
+.title {
+  color: #555555;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.subtitle {
+  margin-top: 28px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .header__menu {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .services__subtitle {
+    margin-bottom: 30px;
+  }
+
+  .services__row {
+    flex-direction: column;
+  }
+
+  .services__item {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 }
